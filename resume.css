@@ -1,0 +1,138 @@
+* {
+  background-color: rgb(43, 43, 43);
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  align-content: center;
+}
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section {
+  background-color: rgb(247, 247, 247);
+  width: 800px;
+  border: 2px solid rgb(69, 196, 255);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4%;
+}
+
+h1 {
+  font-family: "futura-bold";
+  text-align: left;
+  color: rgb(34, 62, 94);
+  background-color: rgb(247, 247, 247);
+}
+
+h2 {
+  font-family: paralucent;
+  font-size: 23px;
+  font-weight: 900;
+  color: rgb(19, 19, 19);
+  background-color: rgb(247, 247, 247);
+  letter-spacing: 0.05em;
+}
+
+h4 {
+  font-family: monospace;
+  color: rgb(69, 196, 255);
+  background-color: rgb(247, 247, 247);
+  padding-bottom: 5px;
+}
+
+li,
+h5,
+ul,
+p,
+td {
+  font-family: futura;
+  font-weight: 200;
+  font-size: 14px;
+  color: rgb(27, 27, 27);
+  background-color: rgb(247, 247, 247);
+  text-align: left;
+}
+
+.monogram {
+  background-color: rgb(247, 247, 247);
+  margin-right: 10px;
+}
+
+#links {
+  font-family: monospace;
+  color: rgb(69, 196, 255);
+  background-color: rgb(247, 247, 247);
+}
+
+.table {
+  color: white;
+  width: 800px;
+  font-family: paralucent;
+  font-size: 23px;
+  font-weight: 900;
+  background-color: rgb(34, 62, 94);
+  padding: 5px;
+  letter-spacing: 0.1em;
+}
+
+.image-size {
+  display: block;
+  height: 700px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+div {
+  background-color: rgb(247, 247, 247);
+}
+
+.flex {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+strong {
+  font-weight: bold;
+  background-color: rgb(247, 247, 247);
+}
+
+.logos {
+  margin-right: 0px;
+  background-color: rgb(247, 247, 247);
+}
+
+table,
+td {
+  border: 1px solid rgb(69, 196, 255);
+  border-collapse: collapse;
+  background-color: rgb(247, 247, 247);
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+}
+
+#inline {
+  display: inline;
+}
+
+#header {
+  background-color: rgb(247, 247, 247);
+  border-bottom: 2px solid rgb(69, 196, 255);
+  border-top: 2px solid rgb(69, 196, 255);
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 0%;
+  padding-left: 10%;
+  height: 200px;
+}
