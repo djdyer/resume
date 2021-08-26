@@ -1,32 +1,45 @@
-* {
-  background-color: rgb(43, 43, 43);
-  margin-left: 0;
-  margin-right: auto;
-  margin-top: 0em;
-  margin-bottom: 0em;
+header {
+  background-color: rgb(247, 247, 247);
+  border-bottom: 2px solid rgb(69, 196, 255);
+  border-top: 2px solid rgb(69, 196, 255);
+  height: 150px;
+  width: 100%;
+}
+
+#links {
+  font-family: monospace;
+  color: rgb(69, 196, 255);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.headshot {
+  display: block;
   align-content: center;
+  height: 700px;
+  width: auto;
+  margin: 40px auto;
+  border-radius: 20px;
 }
 
 body {
-  margin-top: 0;
-  margin-bottom: 0;
+  background-color: rgb(28, 28, 28);
+  width: 100%;
 }
 
 section {
   background-color: rgb(247, 247, 247);
-  width: 800px;
+  width: 70%;
   border: 2px solid rgb(69, 196, 255);
   border-radius: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 4%;
+  margin: 40px auto;
+  padding: 40px;
 }
 
 h1 {
   font-family: "futura-bold";
   text-align: left;
   color: rgb(34, 62, 94);
-  background-color: rgb(247, 247, 247);
 }
 
 h2 {
@@ -34,39 +47,39 @@ h2 {
   font-size: 23px;
   font-weight: 900;
   color: rgb(19, 19, 19);
-  background-color: rgb(247, 247, 247);
   letter-spacing: 0.05em;
 }
 
+/* dates */
 h4 {
   font-family: monospace;
   color: rgb(69, 196, 255);
-  background-color: rgb(247, 247, 247);
-  padding-bottom: 5px;
+}
+
+.logos {
+  margin-right: 50px;
+  width: 100px;
 }
 
 li,
-h5,
-ul,
 p,
+ul,
 td {
   font-family: futura;
   font-weight: 200;
   font-size: 14px;
+  padding: 3px;
   color: rgb(27, 27, 27);
-  background-color: rgb(247, 247, 247);
-  text-align: left;
 }
 
-.monogram {
-  background-color: rgb(247, 247, 247);
-  margin-right: 10px;
+h5 {
+  font-family: futura;
+  font-weight: 200;
+  font-size: 14px;
+  color: rgb(27, 27, 27);
 }
 
-#links {
-  font-family: monospace;
-  color: rgb(69, 196, 255);
-  background-color: rgb(247, 247, 247);
+.bold {
 }
 
 .table {
@@ -80,41 +93,28 @@ td {
   letter-spacing: 0.1em;
 }
 
-.image-size {
-  display: block;
-  height: 700px;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 20px;
-}
-
-div {
-  background-color: rgb(247, 247, 247);
-}
-
-.flex {
+.flexheader {
   display: flex;
-  padding: 10px;
   align-items: center;
   justify-content: space-evenly;
+  padding: 50px;
 }
 
-strong {
-  font-weight: bold;
-  background-color: rgb(247, 247, 247);
+header ul {
+  text-align: center;
 }
 
-.logos {
-  margin-right: 0px;
-  background-color: rgb(247, 247, 247);
+.flexcontent {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: flex-start;
 }
 
 table,
 td {
   border: 1px solid rgb(69, 196, 255);
   border-collapse: collapse;
-  background-color: rgb(247, 247, 247);
 }
 
 th {
@@ -122,17 +122,38 @@ th {
   padding: 5px;
 }
 
-#inline {
-  display: inline;
+@media screen and (max-width: 900px) {
+  .flexcontent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flexheader {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .logos {
+    margin-bottom: 20px;
+  }
+
+  header {
+    height: 250px;
+  }
 }
 
-#header {
-  background-color: rgb(247, 247, 247);
-  border-bottom: 2px solid rgb(69, 196, 255);
-  border-top: 2px solid rgb(69, 196, 255);
-  margin-left: 0%;
-  margin-right: 0%;
-  margin-top: 0%;
-  padding-left: 10%;
-  height: 200px;
+#links:hover::after {
+  content: "Click to see portfolio site";
+  position: absolute;
+  bottom: 24px;
+  min-width: 200px;
+  border: 1px #008cff solid;
+  background-color: #000000;
+  padding: 12px;
+  color: #fff;
+  font-size: 80%;
+}
+
+#links:hover {
+  font-weight: bolder;
 }
