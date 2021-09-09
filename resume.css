@@ -1,30 +1,67 @@
 header {
-  background-color: rgb(247, 247, 247);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-image: linear-gradient(rgb(1, 16, 36), rgb(1, 17, 30));
   border-bottom: 2px solid rgb(69, 196, 255);
-  border-top: 2px solid rgb(69, 196, 255);
-  height: 150px;
+  height: 200px;
   width: 100%;
+  box-shadow: 0px 5px 50px black;
+  margin-bottom: 100px;
+  position: fixed;
+}
+
+#logo {
+  width: 100px;
+  height: auto;
+  margin: 40px;
+}
+
+#name {
+  font-size: 25pt;
+
+  color: rgb(69, 196, 255);
+}
+
+.logolockup {
+  display: inline-flex;
+  align-items: center;
 }
 
 #links {
-  font-family: monospace;
+  font-family: paralucent;
+  letter-spacing: 0.5px;
   color: rgb(69, 196, 255);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
+  margin: 0 50px 0 50px;
 }
 
-.headshot {
-  display: block;
-  align-content: center;
-  height: 700px;
-  width: auto;
-  margin: 40px auto;
-  border-radius: 20px;
+#links:hover {
+  font-weight: bolder;
+  text-shadow: 2px 2px 10px rgb(69, 196, 255);
+  filter: dropshadow(rgb(69, 196, 255), off x=-2, off y=0);
+}
+
+#headshot {
+  height: 570px;
+  border-radius: 18px 0 0 18px;
+  margin-right: 40px;
+}
+
+.flexprofile {
+  display: flex;
+  width: 70%;
+  margin-top: 275px;
+  padding: 0px;
 }
 
 body {
-  background-color: rgb(28, 28, 28);
-  width: 100%;
+  background-image: url(https://static.wixstatic.com/media/be3735_b6158143609c4d9293f7dfb09dc847ac~mv2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 section {
@@ -36,12 +73,19 @@ section {
   padding: 40px;
 }
 
+article {
+  margin: 60px 40px 40px 40px;
+}
+
+/* bold headers */
 h1 {
   font-family: "futura-bold";
-  text-align: left;
+  font-size: 20pt;
+  margin: 10px 0 10px 0;
   color: rgb(34, 62, 94);
 }
 
+/* job titles, companies and schools */
 h2 {
   font-family: paralucent;
   font-size: 23px;
@@ -54,6 +98,7 @@ h2 {
 h4 {
   font-family: monospace;
   color: rgb(69, 196, 255);
+  padding: 10px;
 }
 
 .logos {
@@ -61,25 +106,31 @@ h4 {
   width: 100px;
 }
 
+/* bullet points and tools */
 li,
-p,
 ul,
 td {
   font-family: futura;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 14px;
   padding: 3px;
   color: rgb(27, 27, 27);
 }
 
+p {
+  font-family: paralucent;
+  font-size: 11pt;
+  letter-spacing: 0.05em;
+  color: rgb(27, 27, 27);
+  margin: 35px 40px 35px 0;
+}
+
+/* subtexts */
 h5 {
   font-family: futura;
   font-weight: 200;
-  font-size: 14px;
-  color: rgb(27, 27, 27);
-}
-
-.bold {
+  font-size: 16px;
+  color: rgb(39, 69, 104);
 }
 
 .table {
@@ -91,17 +142,6 @@ h5 {
   background-color: rgb(34, 62, 94);
   padding: 5px;
   letter-spacing: 0.1em;
-}
-
-.flexheader {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 50px;
-}
-
-header ul {
-  text-align: center;
 }
 
 .flexcontent {
@@ -117,6 +157,7 @@ td {
   border-collapse: collapse;
 }
 
+/* table headers */
 th {
   text-align: left;
   padding: 5px;
@@ -140,20 +181,4 @@ th {
   header {
     height: 250px;
   }
-}
-
-#links:hover::after {
-  content: "Click to see portfolio site";
-  position: absolute;
-  bottom: 24px;
-  min-width: 200px;
-  border: 1px #008cff solid;
-  background-color: #000000;
-  padding: 12px;
-  color: #fff;
-  font-size: 80%;
-}
-
-#links:hover {
-  font-weight: bolder;
 }
