@@ -51,7 +51,6 @@ header {
   width: 40%;
   height: auto;
   border-radius: 18px 0 0 18px;
-  margin-right: 40px;
   filter: grayscale(1);
 }
 
@@ -66,34 +65,33 @@ header {
   padding: 0px;
 }
 
+/* Bio */
 p {
   font-family: paralucent;
-  font-size: 10pt;
+  font-size: 9.5pt;
   letter-spacing: 0.1em;
-  margin: 35px 40px 35px 0;
+  margin: 30px;
 }
 
-/* #dots {
-  display: none;
-} */
-
+/* Expanded Bio */
 #fullBio {
   display: none;
 }
 
+/* Button */
 #readMore {
   font-family: monospace;
-  color: rgb(34, 62, 94);
+  color: rgb(177, 177, 177);
   padding: 5px 15px 5px 15px;
   border-radius: 15px;
   border: none;
   background-color: rgb(234, 234, 234);
-  margin-bottom: 35px;
+  margin: 0 0 30px 30px;
 }
 
 #readMore:hover {
   color: rgb(69, 196, 255);
-  box-shadow: 0px 1px 7px rgb(209, 207, 207);
+  box-shadow: 0px 1px 5px rgb(209, 207, 207);
 }
 
 /* Background Fixed Image */
@@ -117,7 +115,6 @@ section {
 
 section:hover {
   box-sizing: border-box;
-  border: 2px solid rgb(69, 196, 255);
   box-shadow: 0px 5px 50px rgb(173, 229, 255);
   margin-top: 275px 40px;
   margin-left: auto;
@@ -146,6 +143,10 @@ h2 {
   letter-spacing: 0.05em;
 }
 
+h2:hover {
+  color: rgb(69, 196, 255);
+}
+
 /* dates */
 h4 {
   font-family: monospace;
@@ -153,60 +154,50 @@ h4 {
   padding: 10px 10px 15px 0;
 }
 
+/* All company or school logos */
 .logos {
   margin-right: 50px;
   width: 100px;
 }
 
+/* .logos:hover {
+  width: 110px;
+} */
+
 /* Experience bullet points */
 li,
-ul {
-  font-family: futura;
-  font-weight: 100;
-  font-size: 14px;
-  padding: 3px;
-  color: rgb(27, 27, 27);
-}
-
-/* All Tools List */
-td {
-  font-family: futura;
-  font-weight: 100;
-  font-size: 14px;
-  padding: 10px;
-  color: rgb(27, 27, 27);
-}
-
-/* subtexts */
+ul,
 h5 {
   font-family: futura;
-  font-weight: 200;
-  font-size: 16px;
-  color: rgb(39, 69, 104);
+  font-weight: 100;
+  font-size: 14px;
+  padding: 3px 5px 3px 0;
+  color: rgb(34, 62, 94);
 }
 
+/* Contains company/school logos alongside list items */
 .flexcontent {
   display: flex;
   align-items: center;
   padding: 10px;
-  justify-content: flex-start;
 }
 
+/* Grid for schools only  */
+.flexgrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-content: left;
+}
+
+/* Tools Table */
 table {
   width: 80%;
   border: 1px solid rgb(69, 196, 255);
   border-collapse: collapse;
   text-align: center;
   margin: auto;
-}
-
-#tableheader {
-  color: white;
-  font-family: paralucent;
-  font-size: 23px;
-  font-weight: 900;
-  background-color: rgb(34, 62, 94);
-  letter-spacing: 0.1em;
+  margin-bottom: 35px;
 }
 
 /* table headers */
@@ -218,13 +209,84 @@ th {
   border-collapse: collapse;
 }
 
-tr {
-  margin: 0;
+th:hover {
+  color: rgb(69, 196, 255);
 }
 
+#tableheader {
+  color: white;
+  font-family: paralucent;
+  font-size: 23px;
+  font-weight: 900;
+  background-color: rgb(34, 62, 94);
+  letter-spacing: 0.1em;
+}
+
+/* tools list items */
 td {
   border: 1px solid rgb(69, 196, 255);
   border-collapse: collapse;
+  font-family: futura;
+  font-weight: 100;
+  font-size: 14px;
+  padding: 10px;
+  color: rgb(27, 27, 27);
+}
+
+td:hover {
+  color: rgb(69, 196, 255);
+}
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  background-color: rgb(34, 62, 94);
+  height: auto;
+  width: 60%;
+  padding: 40px;
+  margin: 35px auto 35px auto;
+}
+/* Input fields */
+input {
+  width: 80%;
+  margin: 10px auto 10px auto;
+  padding: 5px;
+  font-family: monospace;
+  color: rgb(177, 177, 177);
+  border: 2px solid transparent;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+input:hover {
+  border: 2px solid rgb(69, 196, 255);
+}
+
+#message {
+  height: 100px;
+}
+
+/* Send Button */
+#send {
+  font-family: monospace;
+  color: rgb(177, 177, 177);
+  padding: 5px 15px 5px 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(234, 234, 234);
+  margin: 30px auto 30px auto;
+  width: 80px;
+  height: auto;
+}
+
+#send:hover {
+  color: rgb(69, 196, 255);
+  box-shadow: 0px 1px 7px rgb(15, 24, 48);
 }
 
 footer {
@@ -237,12 +299,19 @@ footer {
   margin-top: 100px;
 }
 
+/* footer copyright text */
 h6 {
   font-family: paralucent;
   font-size: 10pt;
   letter-spacing: 0.1em;
   font-weight: 900;
   color: rgb(34, 62, 94);
+}
+
+@media screen and (max-width: 1670px) {
+  .flexgrid {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -266,6 +335,10 @@ h6 {
 
   #readMore {
     margin-left: 35px;
+  }
+
+  #logoadjust {
+    margin-left: 0px;
   }
 }
 
@@ -300,6 +373,7 @@ h6 {
 
   h1 {
     text-align: center;
+    margin-top: 35px;
   }
 
   .flexcontent {
@@ -311,10 +385,11 @@ h6 {
   }
 
   th {
-    padding: 10px 5px 10px 5px;
+    padding: 15px;
   }
 
   table {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+    width: 90%;
   }
 }
