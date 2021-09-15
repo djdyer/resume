@@ -10,6 +10,7 @@ header {
   box-shadow: 0px 5px 50px black;
   margin-bottom: 100px;
   position: fixed;
+  z-index: 5;
 }
 
 #logo {
@@ -20,13 +21,14 @@ header {
 
 #name {
   font-size: 25pt;
-
+  margin: 0;
   color: rgb(69, 196, 255);
 }
 
 .logolockup {
   display: inline-flex;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 #links {
@@ -45,9 +47,16 @@ header {
 }
 
 #headshot {
-  height: 570px;
+  display: block;
+  width: 40%;
+  height: auto;
   border-radius: 18px 0 0 18px;
   margin-right: 40px;
+  filter: grayscale(1);
+}
+
+#headshot:hover {
+  filter: grayscale(0);
 }
 
 .flexprofile {
@@ -57,6 +66,37 @@ header {
   padding: 0px;
 }
 
+p {
+  font-family: paralucent;
+  font-size: 10pt;
+  letter-spacing: 0.1em;
+  margin: 35px 40px 35px 0;
+}
+
+/* #dots {
+  display: none;
+} */
+
+#fullBio {
+  display: none;
+}
+
+#readMore {
+  font-family: monospace;
+  color: rgb(34, 62, 94);
+  padding: 5px 15px 5px 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(234, 234, 234);
+  margin-bottom: 35px;
+}
+
+#readMore:hover {
+  color: rgb(69, 196, 255);
+  box-shadow: 0px 1px 7px rgb(209, 207, 207);
+}
+
+/* Background Fixed Image */
 body {
   background-image: url(https://static.wixstatic.com/media/be3735_b6158143609c4d9293f7dfb09dc847ac~mv2.jpg);
   background-size: cover;
@@ -65,14 +105,26 @@ body {
 }
 
 section {
-  background-color: rgb(247, 247, 247);
+  box-sizing: border-box;
+  background-color: white;
   width: 70%;
-  border: 2px solid rgb(69, 196, 255);
   border-radius: 20px;
   margin: 40px auto;
   padding: 40px;
+  border: 2px solid rgb(69, 196, 255);
+  opacity: 0.8;
 }
 
+section:hover {
+  box-sizing: border-box;
+  border: 2px solid rgb(69, 196, 255);
+  box-shadow: 0px 5px 50px rgb(173, 229, 255);
+  margin-top: 275px 40px;
+  margin-left: auto;
+  opacity: 1;
+}
+
+/* All work experience + all education */
 article {
   margin: 60px 40px 40px 40px;
 }
@@ -81,7 +133,7 @@ article {
 h1 {
   font-family: "futura-bold";
   font-size: 20pt;
-  margin: 10px 0 10px 0;
+  margin: 10px 10px 10px 0;
   color: rgb(34, 62, 94);
 }
 
@@ -98,7 +150,7 @@ h2 {
 h4 {
   font-family: monospace;
   color: rgb(69, 196, 255);
-  padding: 10px;
+  padding: 10px 10px 15px 0;
 }
 
 .logos {
@@ -106,10 +158,9 @@ h4 {
   width: 100px;
 }
 
-/* bullet points and tools */
+/* Experience bullet points */
 li,
-ul,
-td {
+ul {
   font-family: futura;
   font-weight: 100;
   font-size: 14px;
@@ -117,12 +168,13 @@ td {
   color: rgb(27, 27, 27);
 }
 
-p {
-  font-family: paralucent;
-  font-size: 11pt;
-  letter-spacing: 0.05em;
+/* All Tools List */
+td {
+  font-family: futura;
+  font-weight: 100;
+  font-size: 14px;
+  padding: 10px;
   color: rgb(27, 27, 27);
-  margin: 35px 40px 35px 0;
 }
 
 /* subtexts */
@@ -133,17 +185,6 @@ h5 {
   color: rgb(39, 69, 104);
 }
 
-.table {
-  color: white;
-  width: 800px;
-  font-family: paralucent;
-  font-size: 23px;
-  font-weight: 900;
-  background-color: rgb(34, 62, 94);
-  padding: 5px;
-  letter-spacing: 0.1em;
-}
-
 .flexcontent {
   display: flex;
   align-items: center;
@@ -151,34 +192,129 @@ h5 {
   justify-content: flex-start;
 }
 
-table,
-td {
+table {
+  width: 80%;
   border: 1px solid rgb(69, 196, 255);
   border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+}
+
+#tableheader {
+  color: white;
+  font-family: paralucent;
+  font-size: 23px;
+  font-weight: 900;
+  background-color: rgb(34, 62, 94);
+  letter-spacing: 0.1em;
 }
 
 /* table headers */
 th {
   text-align: left;
-  padding: 5px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid rgb(69, 196, 255);
+  border-collapse: collapse;
+}
+
+tr {
+  margin: 0;
+}
+
+td {
+  border: 1px solid rgb(69, 196, 255);
+  border-collapse: collapse;
+}
+
+footer {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  padding: 50px 50px 70px 50px;
+  background-image: linear-gradient(rgb(132, 216, 255), rgb(69, 196, 255));
+  opacity: 0.7;
+  margin-top: 100px;
+}
+
+h6 {
+  font-family: paralucent;
+  font-size: 10pt;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+  color: rgb(34, 62, 94);
+}
+
+@media screen and (max-width: 1400px) {
+  .flexprofile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #headshot {
+    width: 100%;
+    height: auto;
+    border-radius: 18px 18px 0 0;
+    margin: 0;
+  }
+
+  p {
+    font-size: 10pt;
+    letter-spacing: 0.1em;
+    margin: 35px 40px 35px 40px;
+  }
+
+  #readMore {
+    margin-left: 35px;
+  }
 }
 
 @media screen and (max-width: 900px) {
-  .flexcontent {
+  header {
+    height: 400px;
     flex-direction: column;
-    align-items: center;
-  }
-
-  .flexheader {
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
     justify-content: space-around;
   }
-  .logos {
-    margin-bottom: 20px;
+  #logo {
+    margin: 20px 0 0 20px;
   }
 
-  header {
-    height: 250px;
+  .flexprofile {
+    margin-top: 500px;
+    width: 80%;
+  }
+
+  .logolockup {
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+  }
+
+  section {
+    width: 80%;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .flexcontent {
+    flex-direction: column;
+  }
+
+  .logos {
+    margin: 0 0 20px 0;
+  }
+
+  th {
+    padding: 10px 5px 10px 5px;
+  }
+
+  table {
+    margin-bottom: 25px;
   }
 }
