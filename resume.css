@@ -74,12 +74,12 @@ p {
 }
 
 /* Expanded Bio */
-#fullBio {
+.fullBio {
   display: none;
 }
 
 /* Button */
-#readMore {
+.readMore {
   font-family: monospace;
   color: rgb(177, 177, 177);
   padding: 5px 15px 5px 15px;
@@ -89,7 +89,7 @@ p {
   margin: 0 0 30px 30px;
 }
 
-#readMore:hover {
+.readMore:hover {
   color: rgb(69, 196, 255);
   box-shadow: 0px 1px 5px rgb(209, 207, 207);
 }
@@ -175,11 +175,20 @@ h5 {
   color: rgb(34, 62, 94);
 }
 
-/* Contains company/school logos alongside list items */
-.flexcontent {
+/* Contains company logos alongside list items */
+.flexwork {
   display: flex;
   align-items: center;
   padding: 10px;
+}
+
+/* Contains school logos alongside credentials */
+.flexschool {
+  margin: 25px 20px 25px 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 600px;
 }
 
 /* Grid for schools only  */
@@ -376,12 +385,19 @@ h6 {
     margin-top: 35px;
   }
 
-  .flexcontent {
+  .flexwork {
     flex-direction: column;
+    align-items: center;
+  }
+  .logos {
+    margin: 0 30px 20px 0;
   }
 
-  .logos {
-    margin: 0 0 20px 0;
+  .flexschool {
+    padding: 10px;
+    width: 90%;
+    justify-content: flex-start;
+    margin: 10px 0 10px 0;
   }
 
   th {
@@ -391,5 +407,16 @@ h6 {
   table {
     margin-bottom: 35px;
     width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+  input {
+    width: 90%;
+  }
+
+  #message {
+    height: 100px;
   }
 }

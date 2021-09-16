@@ -1,9 +1,12 @@
-// document.getElementById("readMore").addEventListener("click", expandBio());
+document.querySelector(".readMore").addEventListener("click", expandBio);
+
+// OR
+// onclick="expandBio()"
 
 function expandBio() {
-  var dots = document.getElementById("dots");
-  var fullBio = document.getElementById("fullBio");
-  var readMore = document.getElementById("readMore");
+  var dots = document.querySelector(".dots");
+  var fullBio = document.querySelector(".fullBio");
+  var readMore = document.querySelector(".readMore");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
